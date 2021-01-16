@@ -2,7 +2,7 @@
 name: Feature Request
 about: Suggest an idea for one of the libraries.
 title: ''
-labels: ''
+labels: enhancement
 assignees: ''
 
 ---
