@@ -20,6 +20,11 @@ capture.capture = function(startY, endY)
   local currentTerm = term.current()
   local width, height = currentTerm.getSize()
   
+  -- Error if term.getLine isn't accessible.
+  if not currentTerm.getLine then
+    error("Capture is only supported on computers running multishell.", 2)
+  end
+
   -- Apply default values if needed
   startY = startY or 1
   endY = endY or height

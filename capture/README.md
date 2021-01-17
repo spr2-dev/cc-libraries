@@ -18,5 +18,8 @@ capture.redraw(lines)
 ```
 The `example.lua` file provides some more code using that feature.
 
+## Limitations
+Capture only works on computers running multishell. It is not possible to use Capture when redirected to monitors.
+
 ## Common uses
 Use `capture` when you need to save what's on the screen before altering one or multiple lines, and restore it right after, without calling the expensive function that renders your visuals.
