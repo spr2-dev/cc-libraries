@@ -11,6 +11,11 @@ local function writeCentered(str, offset)
   term.write(str)
 end
 
+-- Check if capture is supported on the current terminal object
+if not capture.isCompatible(term.current()) then
+  error("Capture is not compatible with the current term object.")
+end
+
 -- Add some text on the screen, so we can se what's going on
 local text = "Some text \127 "
 local repeatedText = text:rep(w / #text + 1):sub(1, w)

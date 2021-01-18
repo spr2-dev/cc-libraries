@@ -5,6 +5,16 @@ local expect = require("cc.expect").expect
 local capture = {}
 
 --[[
+  Returns a boolean whether the specified term object is
+  compatible with Capture.
+  True if the term object is compatible, false otherwise.
+]]
+capture.isCompatible = function(targetTerm)
+  expect(1, targetTerm, "table")
+  return targetTerm.getLine ~= nil
+end
+
+--[[
   Captures the current term's screen contents, and returns them
   as a table that can passed back to `capture.redraw`.
   
